@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Prerequisitos:
 
-Things you may want to cover:
+* node versión 20.18.0
 
-* Ruby version
+* npm versión 10.8.2
 
-* System dependencies
+Dentro de la carpeta vehicle-font ejecutar
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+npm install
+```
+para instalar las dependencias. luego ejecutar el comando
+```
+npm run dev
+```
+y la aplicación estará corriendo en localhost, con el puerto 5173. 
