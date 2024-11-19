@@ -1,6 +1,6 @@
 # README
 
-Prerequisitos:
+Pre-requisitos:
 
 * node versión 20.18.0
 
