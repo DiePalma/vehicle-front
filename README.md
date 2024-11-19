@@ -6,7 +6,7 @@ Prerequisitos:
 
 * npm versión 10.8.2
 
-Dentro de la carpeta vehicle-font ejecutar
+Dentro de la carpeta vehicle-font ejecutar en la terminal
 
 ```
 npm install
