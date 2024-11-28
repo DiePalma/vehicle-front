@@ -18,6 +18,7 @@ const Mapa = ({ positions }) => {
             <Marker key= {position.identifier}position={position}>
           <Popup>
             {position.identifier}
+            {/* Add coordinates in next line */}
           </Popup>
         </Marker>
         ))}
