@@ -66,7 +66,8 @@ export default function Vehicle() {
                         <div key={vehicle.identifier}>
                             <h4 onClick={() => filterVehicle(vehicle.vehicle_identifier)}>{vehicle.vehicle_identifier}</h4>
                             {/* Manual timezone fix, couldn't find a better way to respect the time provided by the api */}
-                            <p>Last updated at: {dayjs(vehicle.sent_at).add(60, 'minute').format('YYYY-MM-DD HH:mm:ss')}</p>
+                            {/* <p>Last updated at: {dayjs(vehicle.sent_at).add(60, 'minute').format('YYYY-MM-DD HH:mm:ss')}</p> */}
+                            <p>Last updated at: {vehicle.sent_at}</p>
                             <br />
                         </div>
 
