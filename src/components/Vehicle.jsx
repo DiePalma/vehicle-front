@@ -3,14 +3,17 @@ import dayjs from "dayjs";
 import utc from 'dayjs-plugin-utc';
 import Mapa from "./Mapa";
 import React, { useEffect, useState } from "react";
-import '../App.css'
+import '../App.css';
+
 dayjs.extend(utc);
 
 export default function Vehicle() {
     const [vehicles, setVehicles] = useState([]);
     const [filteredVehicle, setFilteredVehicle] = useState(null);
+
     const [positions, setPositions] = useState([]);
     const [filtered, setFiltered] = useState(false);
+ 
 
     useEffect(() => {
         const getVehicles = async () => {
@@ -18,6 +21,7 @@ export default function Vehicle() {
                 const response = await fetchLatestWaypointFromVehicle();
 
                 setVehicles(response.data);
+                console.log(response.data);
                 setPositions(response.data.map(vehicle => ({
                     lat: vehicle.latitude,
                     lng: vehicle.longitude,
@@ -28,12 +32,15 @@ export default function Vehicle() {
             }
         }
 
-
-
-
-
         getVehicles();
+
+
+       
+
     }, []);
+    
+
+     
 
     const getPosition = () => {
         if (filtered && filterVehicle) {
@@ -60,7 +67,9 @@ export default function Vehicle() {
                 {filtered && (
                     <button onClick={resetFilter}>Show all</button>
                 )}
+                
                 {
+                    
                     vehicles.map((vehicle) => (
 
                         <div key={vehicle.identifier}>
