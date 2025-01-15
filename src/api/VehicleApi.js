@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const vehicleApi = axios.create({
-  baseURL: 'http://127.0.0.1:3000/api/v1',  // Asegúrate de que esta URL esté correcta
+  baseURL: 'http://127.0.0.1:8080/api/v1',  
   headers: {
     'Content-Type': 'application/json',
     'Accept': 'application/json',
@@ -19,4 +19,6 @@ export const fetchLatestWaypointFromVehicle  = async () => {
        
     }
 }
+
+
 export default vehicleApi;

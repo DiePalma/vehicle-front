@@ -5,6 +5,7 @@ import './App.css'
 
 import Vehicle from './components/Vehicle'
 import 'leaflet/dist/leaflet.css';
+import WaypointFiller from './components/WaypointFiller';
 
 
 function App() {
@@ -20,11 +21,12 @@ function App() {
       
       <div className='content'>
        <Vehicle/>
+       
        </div>
        <div className='Map'></div>
        
        </div>
-     
+       <WaypointFiller/>
     </>
   )
 }
